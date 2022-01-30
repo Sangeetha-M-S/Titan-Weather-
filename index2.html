@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suggestions</title>
+    <link rel="stylesheet" href="./style1.css">
+    
+</head>
+<script>
+    var params = (new URL(window.location.href)).searchParams;
+    var temp=params.get('temp')
+    var desc=params.get('description')
+    var outfit,food,prec;
+    if(temp>=26){
+      outfit="Choose cotton and other breathable fabrics. Short sleeves are the best option. Opt Jeans, shorts, skirts or leggings for bottoms";
+      food="Water rich foods - salad, green leafy vegetables, melons, mint Avoid spicy food, ginger, red chilly, cumin, pepper, clove, fried and oily foods, non veg";
+      prec="Stay hydrated & beat the heat Don't forget to apply sunscreen Use sunglassess!!"
+    }
+    else if(temp<=5){
+     outfit="Go for some warmer options like hoodies, leather jackets, Puffer coats, Sneakers or boots. A light scarf is also optional. Keep your fingers warm by using gloves.";
+     food="Veg soup, dry fruits, nuts, seeds, healthy fats Avoid chilled food items, dairy products, more oily or fried items";
+     prec="Don't forget to moisturize frequently Ensure your clothes are dry and avoid damp tramps";
+    }
+    else if(temp>5 && temp<26){
+        if (desc.toLowerCase().indexOf("clouds") >= 0){
+            prec="Keep an umbrella or raincoat handy. Keep your surroundings clean and clear any stagnant water. Stay hydrated";
+            outfit="Choose some casual outfits like long sleeve shirts paired with jeans, joggers, or skirt.Grab a black or tan turtleneck to dress up. Use trainers or sneakers to keep your feet warm. Go for simple lightweight outfits. Keep it simple with polo shirts, denim and long pants.Wear sandals or sneakers.";
+            food="Green pepper corns, fruits, vegetables,probiotics, protein rich food, ginger and garlic, foods containing Omega-3 fatty acids. Avoid cabbage, broccoli and cauliflower, sour foods, fizzy drinks, diary products, mushrooms, seafood, juices";
+        }
+        else if (desc.toLowerCase().indexOf("rain") >= 0){
+            prec="Do not touch the electric wires. Drive slowly and carefully. Don't forget to take an umbrella with you and also, you don't have to water your plants today!";
+            outfit="Choose some casual outfits like long sleeve shirts paired with jeans, joggers, or skirt.Grab a black or tan turtleneck to dress up. Use trainers or sneakers to keep your feet warm. Go for simple lightweight outfits. Keep it simple with polo shirts, denim and long pants.Wear sandals or sneakers.";
+            food="Green pepper corns, fruits, vegetables,probiotics, protein rich food, ginger and garlic, foods containing Omega-3 fatty acids. Avoid cabbage, broccoli and cauliflower, sour foods, fizzy drinks, diary products, mushrooms, seafood, juices";
+        }
+        else if(desc.toLocaleLowerCase().indexOf("clear")>=0){
+            prec="Be safe from sudden cloud-to-ground lightning bolts. ";
+            outfit="Choose some casual outfits like long sleeve shirts paired with jeans, joggers, or skirt.Grab a black or tan turtleneck to dress up. Use trainers or sneakers to keep your feet warm. Go for simple lightweight outfits. Keep it simple with polo shirts, denim and long pants.Wear sandals or sneakers.";
+            food="Green pepper corns, fruits, vegetables,probiotics, protein rich food, ginger and garlic, foods containing Omega-3 fatty acids. Avoid cabbage, broccoli and cauliflower, sour foods, fizzy drinks, diary products, mushrooms, seafood, juices";
+        }
+        else{
+            prec="Protect yourself from mosquitoe bites. Keep your surroundings clean.";
+            outfit="Choose some casual outfits like long sleeve shirts paired with jeans, joggers, or skirt.Grab a black or tan turtleneck to dress up. Use trainers or sneakers to keep your feet warm. Go for simple lightweight outfits. Keep it simple with polo shirts, denim and long pants.Wear sandals or sneakers.";
+            food="Green pepper corns, fruits, vegetables,probiotics, protein rich food, ginger and garlic, foods containing Omega-3 fatty acids. Avoid cabbage, broccoli and cauliflower, sour foods, fizzy drinks, diary products, mushrooms, seafood, juices";
+        }
+    }
+    </script>
+<body>  
+    <style>
+        body {
+          background-image: url('image/Background_image.jpeg');
+          background-repeat: no-repeat;
+          background-attachment: fixed;
+          background-size: 100% 100%;
+        }
+        </style>
+    <body>
+        <div class="container">
+            <div class="card">
+                <div class="face face1">
+                    <div class="content">
+                        <img src="outfit.png" style="height: 110px;">
+                        <h3>Outfit</h3>
+                    </div>
+                </div>
+                <div class="face face2">
+                    <div class="content">
+                        <p><script type="text/javascript">
+                            document.write(outfit)
+                          </script></p>
+                        <!--<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cum cumque minus iste veritatis provident at.</p>-->
+                       <!--<a href="#">Read More</a>-->
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="face face1">
+                    <div class="content">
+                        <img src="restaurant.png">
+                        <h3>Food</h3>
+                    </div>
+                </div>
+                <div class="face face2">
+                    <div class="content">
+                        <p><script type="text/javascript">
+                         document.write(food)
+                        </script></p>
+                            <!--<a href="#">Read More</a>-->
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="face face1">
+                    <div class="content">
+                        <img src="weather.png" style="height: auto; width: 200px;">
+                        <h3>Precautions</h3>
+                    </div>
+                </div>
+                <div class="face face2">
+                    <div class="content">
+                        <p><script type="text/javascript">
+                            document.write(prec)
+                        </script></p>
+                            <!--<a href="#">Read More</a>-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</body>
+</body>
+</html>
