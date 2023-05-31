@@ -1,9 +1,5 @@
 body{
-    /*margin: auto;
-    padding: 0;*/
     min-height: 100vh;
-    /*background: rgb(77, 144, 120);
-    background-image: url(image/Background_image.jpeg);*/
     display: flex;
     justify-content: center;
     align-items: center;
